@@ -1,0 +1,33 @@
+#include "stdafx.h"
+
+#include "ScrollRoller.h"
+
+///////////////////////////////////////////////////////////////////
+CScrollRoller::CScrollRoller ()
+  {
+  for (int n(0); n<6; n++)
+    m_queueList.push (n);
+
+  }
+///////////////////////////////////////////////////////////////////
+CScrollRoller::~CScrollRoller ()
+  {
+  }
+///////////////////////////////////////////////////////////////////
+void CScrollRoller::Run ()
+  {
+  int nQueueSize = m_queueList.size ();
+
+  int nElement = m_queueList.front ();
+  m_queueList.push (nElement);
+  }
+///////////////////////////////////////////////////////////////////
+bool CScrollRoller::BuildGeometry ()
+  {
+  return false;
+  }
+///////////////////////////////////////////////////////////////////
+bool CScrollRoller::LoadTextures ()
+  {
+  return false;
+  }
